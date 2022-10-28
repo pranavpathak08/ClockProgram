@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300&display=swap');
+
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: 'Roboto', sans-serif;
+    background: #333;
+    color: white;
+    line-height: 1.6;
+}
+.slider{
+    overflow: hidden;
+    height: 100vh;
+    width: 100vw;
+}
+.slide{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 0.4s ease-in-out;
+}
+.slide.current{
+    opacity: 1;
+}
+
+.slide:first-child{
+    background: url('image1.jpg') no-repeat center center/cover; 
+}
+.slide:nth-child(2){
+    background: url('image2.jpg') no-repeat center center/cover;
+}
+.slide:nth-child(3){
+    background: url('image3.jpg') no-repeat center center/cover;
+}
+.slide:nth-child(4){
+    background: url('image4.jpg') no-repeat center center/cover;
+}
+.slide:nth-child(5){
+    background: url('image5.jpg') no-repeat center center/cover;
+}
+.slide:nth-child(6){
+    background: url('image6.jpg') no-repeat center center/cover;
+}
+
+.buttons button#next{
+    position: absolute;
+    top: 50%;
+    right: 15px;
+}
+.buttons button#prev{
+    position: absolute;
+    top: 50%;
+    left: 15px;
+}
+.buttons button{
+    border: 2px solid white;
+    background-color: transparent;
+    color: white;
+    cursor: pointer;
+    padding: 13px 15px;
+    border-radius: 50%;
+    outline: none;
+    transition: background-color 0.2s ease-in;
+}
+.buttons button:hover{
+    background-color: white;
+    color: #333;
+}
+
+
+
+.clock{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    gap: 30px;
+    position: relative;
+}
+*{
+    margin: 0;
+}
+
+
+.circle{
+    height: 150px;
+    width: 150px;
+    border: 3px solid wheat;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#ampm{
+    color: white;
+    font-size: 2em;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 100;
+}
+.text{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 100;
+    font-size: 3em;
+    color: white;
+}
+.colon{
+    color: white;
+    font-size: 2em;
+    font-family: 'Roboto', sans-serif;
+
+}
+
+@media (max-width: 620px) {
+    .clock{
+        gap: 15px
+    }
+    .circle{
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+    }
+    #ampm{
+        font-size: 1.5em;
+    }
+    .text{
+        font-size: 2em;
+    }
+
+    
+}
+
